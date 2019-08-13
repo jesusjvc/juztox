@@ -44,11 +44,6 @@ Version:        1.0
 .header-logo {
   margin-top: 10px;
 }
-.mk-header-holder {
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 0px;
-  background-color: #fff;
-}
 a,
 p,
 h1,
@@ -189,9 +184,6 @@ button,
 }
 .botones-enlace a.verde-fuerte {
   background: #32aa49;
-}
-.header-style-2.header-align-left .mk-header-nav-container {
-  padding-top: 15px;
 }
 .add-header-height {
   height: 120px;
@@ -362,11 +354,6 @@ table.wccpf_fields_table td.wccpf_label label {
 }
 .mk-product .description p {
   margin: 1em 0;
-}
-@media only screen and (min-width: 1040px) {
-  .mk-header-holder {
-    height: 230px;
-  }
 }
 @media only screen and (max-width: 750px) {
   #contacto-footer .flex {
