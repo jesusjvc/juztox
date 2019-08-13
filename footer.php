@@ -120,8 +120,8 @@ mk_get_header_view('global', 'full-screen-search');
                     });
                 }); 
 
-                function disableDates(date){
-                    var disableDays=["sunday"];
+               /* function disableDates(date){
+                    var disableDays=["saturday"];
                     var day=date.getDay();
                     for(var i=0;i<disableDays.length;i++){
                         var test=disableDays[i]
@@ -137,21 +137,23 @@ mk_get_header_view('global', 'full-screen-search');
                     		{return[false];}
                     }
 					var weekenddate=$.datepicker.noWeekends(date);return weekenddate;return[true];
-                }
+                }*/
 
          
 
                 //date picker jugos
 
-                $.datepicker.setDefaults(options);
+              /*  $.datepicker.setDefaults(options);
                   $("body").on("focus", ".wccpf-datepicker-cundo_quieres_tus_jugos", function(){
                       $(this).datepicker( {                                                                
-                        dateFormat:'dd-mm-yy',minDate: 1, beforeShowDay: function( date ){ var day = date.getDay();return [( ( day != 0 )/*&&( day != 1 )*/ )];  }  
+                        dateFormat:'dd-mm-yy',minDate: 1, beforeShowDay: function( date ){ var day = date.getDay();return [ ( day != 6 )];  }  
                         ,onSelect: function( dateText ) {
                             $(this).next().hide();
                         }                                
                     });
-                });    
+                }); 
+                
+                */
 
 
        } (jQuery));    
@@ -162,7 +164,7 @@ mk_get_header_view('global', 'full-screen-search');
 
             //Desactivar días
             // El formato de fecha es: d/m/y, no hay que usar ceros en el mes
-            var unavailableDates = ["2-5-2018"];
+            var unavailableDates = ["19-4-2019","12-8-2019","10-8-2019"];
 
           function check_cdmx(date) {
               dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
@@ -244,7 +246,7 @@ mk_get_header_view('global', 'full-screen-search');
                     $('.wccpf-datepicker-qu_da_planeas_iniciar_tu_detox').datepicker( {
                        minDate: 3,    
                        dateFormat:'dd-mm-yy',  
-                       beforeShowDay: check_puebla                                 
+                       beforeShowDay: check_cuernavaca //Aqui había dejado un comentario en la ver. anterior desaparecida; el criterio se hizo igual al de cuerna.                                 
                                                 
                     });             
          
@@ -255,17 +257,20 @@ mk_get_header_view('global', 'full-screen-search');
 
             
             // Date picker de los jugos
-            $('.wccpf-datepicker--cundo_quieres_tus_jugos').datepicker('setDate', null);
+            //$('.wccpf-datepicker--cundo_quieres_tus_jugos').datepicker('setDate', null);
 
-                     $( ".wccpf-datepicker-cundo_quieres_tus_jugos" ).datepicker("destroy");
+                     //$( ".wccpf-datepicker-cundo_quieres_tus_jugos" ).datepicker("destroy");
 
-                    
+                /*    
                     $('.wccpf-datepicker-cundo_quieres_tus_jugos').datepicker( {
                        minDate: 1,  
                        dateFormat:'dd-mm-yy',                                       
                        beforeShowDay: check_cdmx
                        //beforeShowDay: check_cdmx 
                     });  
+                    
+                    
+                    */
         }); 
     </script>
     <?php } ?>

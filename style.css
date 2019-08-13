@@ -402,3 +402,9 @@ body.woocommerce .star-rating::before {
 .redes-sociales {
   justify-content: center;
 }
+.intro-left .mk-grid .page-subtitle {
+  display: none !important;
+}
+.wishlist_item .button {
+  display: none !important;
+}

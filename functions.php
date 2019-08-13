@@ -1,7 +1,5 @@
 <?php 
 
-require_once get_stylesheet_directory() . "/class.wp-auto-theme-update.php";
-
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
 
@@ -12,6 +10,12 @@ function new_loop_shop_per_page( $cols ) {
   return $cols;
 }
 
+function remove_core_updates(){
+global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+}
+add_filter('pre_site_transient_update_core','remove_core_updates');
+add_filter('pre_site_transient_update_plugins','remove_core_updates');
+add_filter('pre_site_transient_update_themes','remove_core_updates');
  
 function wc_ninja_custom_variable_price( $price, $product ) {
     // Main Price
